@@ -223,7 +223,10 @@ export const registerUser = createAsyncThunk(
 
 const registrationSlice = createSlice({
   name: "registration",
-  initialState: { loading: false, user: null, error: null, success: false },
+  initialState: { loading: false,
+                  user: null,
+                   error: null,
+                  success: false },
   reducers: {},
   extraReducers: (builder) => {
     builder

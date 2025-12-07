@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "./Store"; // your thunk
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+function Login({ setPopup }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -22,7 +22,8 @@ function Login() {
     e.preventDefault();
 
     if (!form.email || !form.password) {
-      alert("Please fill all fields!");
+      setPopup("⚠️ Please fill all fields!");
+      setTimeout(() => setPopup(""), 2000);
       return;
     }
 
@@ -32,13 +33,25 @@ function Login() {
   // Redirect after login
   useEffect(() => {
     if (success) {
-      navigate("/"); // redirect home
+      setPopup("✅ Login Successful!");
+      setTimeout(() => {
+        setPopup("");
+        navigate("/"); // redirect home
+      }, 1500);
     }
-  }, [success, navigate]);
+  }, [success, navigate, setPopup]);
+
+  // Show error popup
+  useEffect(() => {
+    if (error) {
+      setPopup("❌ Invalid credentials! Try again.");
+      setTimeout(() => setPopup(""), 2000);
+    }
+  }, [error, setPopup]);
 
   return (
     <div style={{ width: "350px", margin: "60px auto" }}>
-      <h2>Login</h2>
+      <h2>🔐 Login</h2>
 
       <form onSubmit={handleSubmit}>
         <input
@@ -73,12 +86,6 @@ function Login() {
           {loading ? "Logging in..." : "Login"}
         </button>
       </form>
-
-      {error && (
-        <p style={{ color: "red", marginTop: "10px" }}>
-          Invalid credentials ! Try again.
-        </p>
-      )}
     </div>
   );
 }
