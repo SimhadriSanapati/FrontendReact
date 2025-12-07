@@ -1,0 +1,118 @@
+/* Full page container */
+.veg-container {
+  position: relative;
+  padding: 30px;
+  min-height: 100vh;
+  z-index: 1;
+  /* fallback background if video fails */
+  background: #f4fff4;
+  overflow: hidden;
+}
+
+/* Background video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1; /* fully visible */
+}
+
+/* Remove overlay, keep video clear */
+.veg-container::before {
+  content: "";
+  display: none; /* remove semi-transparent layer */
+}
+
+/* Title */
+.veg-container h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: rgb(184, 81, 184);
+  position: relative;
+  z-index: 1;
+}
+
+/* FULL PAGE GRID */
+.veg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 25px;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card design */
+.veg-card {
+  background: rgba(255, 255, 255, 0.9); /* slightly transparent for video effect */
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #c8e6c9;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: 0.25s;
+}
+
+.veg-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Images full size */
+.veg-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* Button */
+.add-to-cart {
+  padding: 10px 14px;
+  width: 100%;
+  background: #43a047;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 0.2s;
+}
+
+.add-to-cart:hover {
+  background: #2e7d32;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #c8e6c9;
+  transition: 0.2s;
+}
+
+.pagination button.active {
+  font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #a5d6a7;
+}

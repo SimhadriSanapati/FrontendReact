@@ -1,0 +1,28 @@
+.contact-container {
+  background-color: hsl(210, 55%, 44%); /* light background, like your page */
+  padding: 40px;
+  max-width: 500px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(157, 29, 29, 0.1);
+  font-family: Arial, sans-serif;
+  color: #1a1a1a; /* dark text for visibility */
+  text-align: center;
+}
+
+.contact-container h1 {
+  color: #0d47a1; /* dark blue for heading */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-container h2 {
+  color: #333333; /* dark gray */
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  color: #555555; /* medium gray */
+  font-size: 16px;
+  margin-top: 0;
+}

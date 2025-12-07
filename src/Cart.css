@@ -1,0 +1,218 @@
+/* -----------------------------------------
+   CART PAGE – CLEAN MODERN UI
+----------------------------------------- */
+
+/* Main Cart Wrapper */
+.cart-container {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Cart Title */
+.cart-container h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #222;
+  font-weight: 700;
+}
+
+/* Cart Items List */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Individual Cart Item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.01);
+}
+
+/* Product Image */
+.cart-item img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+/* Item Left Section */
+.item-details {
+  flex: 1;
+}
+
+/* Product Name */
+.item-details h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Price + Qty Text */
+.item-details p {
+  margin: 6px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Buttons (+, -, Remove) */
+.item-details button {
+  padding: 7px 13px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: white;
+  transition: 0.2s ease;
+}
+
+/* + Button */
+.item-details .inc-btn {
+  background-color: #28a745;
+}
+.item-details .inc-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* - Button */
+.item-details .dec-btn {
+  background-color: #ffc107;
+  color: #222;
+}
+.item-details .dec-btn:hover {
+  background-color: #d39e00;
+  color: black;
+}
+
+/* Remove Button */
+.item-details .remove-btn {
+  background-color: #dc3545;
+}
+.item-details .remove-btn:hover {
+  background-color: #b52a37;
+}
+
+/* COUPON TAG */
+.coupon-tag {
+  display: inline-block;
+  background: #e3ffe3;
+  border: 1px solid #89d889;
+  color: #155724;
+  padding: 7px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* SUMMARY SECTION */
+.summary-section {
+  margin-top: 35px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.summary-section h2,
+.summary-section h3,
+.summary-section h1 {
+  text-align: right;
+  margin: 6px 0;
+  color: #333;
+}
+
+/* Discount Buttons */
+.discount-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.discount-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.2s ease;
+}
+
+/* 10% OFF button */
+.discount-btn.green {
+  background-color: #28a745;
+}
+.discount-btn.green:hover {
+  background-color: #1e7e34;
+}
+
+/* 20% OFF button */
+.discount-btn.blue {
+  background-color: #007bff;
+}
+.discount-btn.blue:hover {
+  background-color: #0056b3;
+}
+
+/* Proceed Button */
+.proceed-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #ff6600;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.proceed-btn:hover {
+  background: #cc5200;
+}
+
+/* Popup message */
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  z-index: 9999;
+  font-size: 16px;
+  font-weight: 600;
+  animation: fadeOut 1.8s ease-out;
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}

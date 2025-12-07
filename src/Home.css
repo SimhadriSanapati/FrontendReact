@@ -1,0 +1,119 @@
+/* Home container */
+.home-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0e6ff; /* pastel lilac */
+  padding: 40px 20px;
+  min-height: 100vh;
+  text-align: center;
+  color: #333;
+}
+
+/* Banner section */
+.banner {
+  background: linear-gradient(135deg, #e9d9ff, #f7f0ff);
+  color: #5a2ea6; /* dark purple */
+  padding: 60px 25px;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(90, 46, 166, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(90, 46, 166, 0.2);
+}
+
+.banner h1 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Highlight text */
+.highlight {
+  background-color: #2a7a29; /* green */
+  color: white;
+  padding: 6px 14px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* Category Title */
+.category-title {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  color: #5a2ea6;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Products Grid – responsive */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+/* Product Card */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(90, 46, 166, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(90, 46, 166, 0.2);
+}
+
+/* Product Images */
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background-color: #f7f7f7;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Title text */
+.product-card h3 {
+  margin: 10px 0 5px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 40px;
+}
+
+/* Price text */
+.product-card p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* A*

@@ -1,0 +1,86 @@
+/* Container for the full page */
+.veg-container {
+  padding: 20px;
+  background: #f6fff6;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Title */
+.veg-container h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+/* Side by side layout */
+.veg-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; 
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar track for cleaner look */
+.veg-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.veg-grid::-webkit-scrollbar-thumb {
+  background: #81c784;
+  border-radius: 10px;
+}
+
+/* Card styling */
+.veg-card {
+  min-width: 220px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #e8f5e9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+  text-align: center;
+}
+
+.veg-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image inside card */
+.veg-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Card text */
+.veg-card h3 {
+  font-size: 18px;
+  color: #2e7d32;
+  margin: 10px 0 5px 0;
+}
+
+.veg-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 2px 0;
+}
+
+/* Button styling */
+.add-to-cart {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.add-to-cart:hover {
+  background-color: #388e3c;
+}
