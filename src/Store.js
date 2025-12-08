@@ -5,18 +5,18 @@ import { Coupons } from "./Cuopons";
 // =====================================================
 // ⭐ AXIOS INSTANCE WITH TOKEN INTERCEPTOR
 // =====================================================
-const api = axios.create({
-  baseURL: "http://localhost:7000/api/v1/products",
-});
+// const api = axios.create({
+//   baseURL: "http://localhost:7000/api/v1/products",
+// });
 
 // Attach token automatically
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
+// api.interceptors.request.use((config) => {
+//   const token = localStorage.getItem("token");
+//   if (token) {
+//     config.headers.Authorization = `Bearer ${token}`;
+//   }
+//   return config;
+// });
 
 // =====================================================
 // CART SLICE
@@ -84,7 +84,7 @@ export const { applyCoupons } = couponSlice.actions;
 export const fetchHomeProducts = createAsyncThunk(
   "homeproducts/fetchHomeProducts",
   async () => {
-    const response = await api.get("/getAllHome");
+    const response = await api.get("/api/v1/products/getAllHome");
     return response.data;
   }
 );
@@ -115,7 +115,7 @@ const homeProductsSlice = createSlice({
 export const fetchVegProducts = createAsyncThunk(
   "vegproducts/fetchVegProducts",
   async () => {
-    const response = await api.get("/getAllVeg");
+    const response = await api.get("/api/v1/products/getAllVeg");
     return response.data;
   }
 );
@@ -146,7 +146,7 @@ const vegSlice = createSlice({
 export const placeOrder = createAsyncThunk(
   "orders/placeOrder",
   async (orderData) => {
-    const response = await api.post("/orders", orderData);
+    const response = await api.post("/api/v1/products/orders", orderData);
     return response.data;
   }
 );
@@ -185,7 +185,7 @@ const ordersSlice = createSlice({
 export const fetchOrders = createAsyncThunk(
   "getorders/fetchOrders",
   async () => {
-    const response = await api.get("/getOrders");
+    const response = await api.get("/api/v1/products/getOrders");
     return response.data;
   }
 );
@@ -216,7 +216,7 @@ const getOrdersSlice = createSlice({
 export const registerUser = createAsyncThunk(
   "registration/registerUser",
   async (formData) => {
-    const response = await api.post("/register", formData);
+    const response = await api.post("/api/v1/products/register", formData);
     return response.data;
   }
 );
@@ -249,7 +249,7 @@ const registrationSlice = createSlice({
 export const loginUser = createAsyncThunk(
   "login/loginUser",
   async (formData) => {
-    const response = await api.post("/login", formData);
+    const response = await api.post("/api/v1/products/login", formData);
     return response.data; // must return { user, token }
   }
 );
