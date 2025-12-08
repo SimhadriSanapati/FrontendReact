@@ -13,7 +13,7 @@ function Vegetables({ setPopup }) {
     { id: 606, name: "Spinach", price: 10, photo: "https://imgs.search.brave.com/cp7CCjIRU2JeuqTtDDIKTe0s_7JJAHOmHnyBqmVJcxs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vMzAvODI1MzAt/MDUwLTc5OTExREQ0/L1NwaW5hY2gtbGVh/dmVzLXZpdGFtaW5z/LXNvdXJjZS1wZXJz/b24uanBnP3c9NDAw/Jmg9MzAwJmM9Y3Jv/cA" },
     { id: 607, name: "Broccoli", price: 40, photo: "https://imgs.search.brave.com/dm_q7pmGhJLjM5UjfqGlmddscSpv65ffNagyKG3revk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTMv/NzEzLzk5Ny9zbWFs/bC9mcmVzaC1icm9j/Y29saS1oYXJ2ZXN0/LWhlbGQtaW4taGFu/ZC13aXRoLXZpYnJh/bnQtZ3JlZW4tbGVh/dmVzLWluLWdhcmRl/bi1waG90by5qcGc" },
     { id: 608, name: "Cauliflower", price: 35, photo: "https://imgs.search.brave.com/Oj8BFAk3SxbvOfw-s567qSIrVpmcJF3Ybt7Wb6CF9kA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTgy/MjQwNTc3L3Bob3Rv/L2Jpbi1vZi1jYXVs/aWZsb3dlci1oZWFk/cy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9NTZJdEg2cTFl/S1NIWXJTVlN5VEdm/aU83enJMbjJ1Smt3/ZGozLWFOcUZkOD0" },
-    { id: 611, name: "Capsicum", price: 25, photo: "https://imgs.search.brave.com/apSZeXuLKWFzA7yj3o-roJPj8y87L4oPo8JnLGTZI80/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzE2Lzg1LzMwLzc3/LzM2MF9GXzE2ODUz/MDc3MDZfZm9UOTdL/RDczbktwVnFoR2ZX/bzZKRUdIdjlIRUkz/QzYuanBn" },
+    { id: 612, name: "Capsicum", price: 25, photo: "https://imgs.search.brave.com/apSZeXuLKWFzA7yj3o-roJPj8y87L4oPo8JnLGTZI80/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzE2Lzg1LzMwLzc3/LzM2MF9GXzE2ODUz/MDc3MDZfZm9UOTdL/RDczbktwVnFoR2ZX/bzZKRUdIdjlIRUkz/QzYuanBn" },
     { id: 604, name: "Onion", price: 12, photo: "https://imgs.search.brave.com/kY6EAudr8jhvmVyo4nV7_J_mOX1A-QphFb7_wFZDke8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vdmFyaWFu/dHMvcThFQWFIbldG/V21rbU1GdFQ2MThw/Y0VXLzYyNGYwZGMx/ZGZmOWJkY2NhYjAz/MmY5M2MzM2U3OWRl/Nzg0ODE3NzBlNzll/MjFkM2IwNDY5ZGFm/NTFmMDI3OTc" },
     { id: 610, name: "Garlic", price: 50, photo: "https://imgs.search.brave.com/r3E-eX22jCcjU7EwgXdUAuiUVrIFahI6zcjUbA3doeQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/c3RvY2tzbmFwLmlv/L2ltZy10aHVtYnMv/MjgwaC9vbmlvbnMt/Z2FybGljXzU2U1VU/TTU2VDUuanBn" },
     {id :611 , name :"sincah", price :1 ,photo:"https://imgs.search.brave.com/r3E-eX22jCcjU7EwgXdUAuiUVrIFahI6zcjUbA3doeQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/c3RvY2tzbmFwLmlv/L2ltZy10aHVtYnMv/MjgwaC9vbmlvbnMt/Z2FybGljXzU2U1VU/TTU2VDUuanBn"}
@@ -33,10 +33,10 @@ function Vegetables({ setPopup }) {
   return (
     <div className="veg-container">
       {/* Background Video */}
-      <video autoPlay loop muted className="background-video">
+      {/* <video autoPlay loop muted className="background-video">
        <source src="/vegetable-video.mp4" type="video/mp4" />
 
-      </video>
+      </video> */}
 
       <h1>🚜 Fresh Vegetable Products 🌽</h1>
 
