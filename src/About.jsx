@@ -1,4 +1,4 @@
- src/About.jsx
+//  src/About.jsx
 import React from "react";
 import "./About.css";
 // import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION } from "./config";
