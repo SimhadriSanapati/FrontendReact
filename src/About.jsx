@@ -1,19 +1,19 @@
-// src/About.jsx
+ src/About.jsx
 import React from "react";
 import "./About.css";
-import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION } from "./config";
+// import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION } from "./config";
 
 function About() {
   return (
     <div className="about-container">
       <header className="about-header">
-        <h1>About {SITE_NAME}</h1>
-        <p className="tagline">{SITE_TAGLINE}</p>
+        <h1>About </h1>
+        <p className="tagline"></p>
       </header>
 
       <section className="about-content">
         <h2>Our Story</h2>
-        <p>{SITE_DESCRIPTION}</p>
+        <p></p>
 
         <h2>Why Choose Us?</h2>
         <ul>
