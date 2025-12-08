@@ -34,7 +34,8 @@ function Vegetables({ setPopup }) {
     <div className="veg-container">
       {/* Background Video */}
       <video autoPlay loop muted className="background-video">
-        <source src="/vegetable video.mov(1)" type="video/mp4" />
+       <source src="/vegetable-video.mp4" type="video/mp4" />
+
       </video>
 
       <h1>🚜 Fresh Vegetable Products 🌽</h1>
