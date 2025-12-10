@@ -1,6 +1,7 @@
 import { configureStore, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { Coupons } from "./Cuopons";
+import api from "./axios";
 
 // =====================================================
 // ⭐ AXIOS INSTANCE WITH TOKEN INTERCEPTOR
@@ -84,7 +85,7 @@ export const { applyCoupons } = couponSlice.actions;
 export const fetchHomeProducts = createAsyncThunk(
   "homeproducts/fetchHomeProducts",
   async () => {
-    const response = await api.get("/api/v1/products/getAllHome");
+    const response = await api.get("/getAllHome");
     return response.data;
   }
 );
@@ -115,7 +116,7 @@ const homeProductsSlice = createSlice({
 export const fetchVegProducts = createAsyncThunk(
   "vegproducts/fetchVegProducts",
   async () => {
-    const response = await api.get("/api/v1/products/getAllVeg");
+    const response = await api.get("/getAllVeg");
     return response.data;
   }
 );
@@ -146,7 +147,7 @@ const vegSlice = createSlice({
 export const placeOrder = createAsyncThunk(
   "orders/placeOrder",
   async (orderData) => {
-    const response = await api.post("/api/v1/products/orders", orderData);
+    const response = await api.post("/orders", orderData);
     return response.data;
   }
 );
@@ -185,7 +186,7 @@ const ordersSlice = createSlice({
 export const fetchOrders = createAsyncThunk(
   "getorders/fetchOrders",
   async () => {
-    const response = await api.get("/api/v1/products/getOrders");
+    const response = await api.get("/getOrders");
     return response.data;
   }
 );
@@ -216,7 +217,7 @@ const getOrdersSlice = createSlice({
 export const registerUser = createAsyncThunk(
   "registration/registerUser",
   async (formData) => {
-    const response = await api.post("/api/v1/products/register", formData);
+    const response = await api.post("/register", formData);
     return response.data;
   }
 );
@@ -249,7 +250,7 @@ const registrationSlice = createSlice({
 export const loginUser = createAsyncThunk(
   "login/loginUser",
   async (formData) => {
-    const response = await api.post("/api/v1/products/login", formData);
+    const response = await api.post("/login", formData);
     return response.data; // must return { user, token }
   }
 );

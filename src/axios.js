@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Create axios instance
 const api = axios.create({
-  baseURL: "https://backend-express-self.vercel.app", // ⭐ Your backend base URL
+  baseURL: "https://backend-express-brown.vercel.app", // ⭐ Your backend base URL
 });
 
 // Automatically attach token to every request
